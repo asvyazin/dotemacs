@@ -11,3 +11,23 @@
 (add-hook 'lisp-mode-hook             (lambda () (paredit-mode +1)))
 (add-hook 'lisp-interaction-mode-hook (lambda () (paredit-mode +1)))
 (add-hook 'scheme-mode-hook           (lambda () (paredit-mode +1)))
+
+;; smex
+(add-to-list 'load-path "~/.emacs.d/lisp/smex")
+(require 'smex)
+(smex-initialize)
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
+;; company-mode
+(add-to-list 'load-path "~/.emacs.d/lisp/company-mode")
+(require 'company)
+(add-hook 'after-init-hook 'global-company-mode)
+
+;; cl-lib
+(add-to-list 'load-path "~/.emacs.d/lisp/cl-lib")
+
+;; magit
+(add-to-list 'load-path "~/.emacs.d/lisp/magit")
+(require 'magit)

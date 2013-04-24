@@ -4,3 +4,15 @@
 [submodule "lisp/paredit"]
 	path = lisp/paredit
 	url = https://github.com/emacsmirror/paredit.git
+[submodule "lisp/smex"]
+	path = lisp/smex
+	url = https://github.com/nonsequitur/smex.git
+[submodule "lisp/company-mode"]
+	path = lisp/company-mode
+	url = https://github.com/company-mode/company-mode.git
+[submodule "lisp/magit"]
+	path = lisp/magit
+	url = https://github.com/emacsmirror/magit.git
+[submodule "lisp/cl-lib"]
+	path = lisp/cl-lib
+	url = https://github.com/emacsmirror/cl-lib.git
