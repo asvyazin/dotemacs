@@ -16,3 +16,6 @@
 [submodule "lisp/cl-lib"]
 	path = lisp/cl-lib
 	url = https://github.com/emacsmirror/cl-lib.git
+[submodule "lisp/erlang"]
+	path = lisp/erlang
+	url = https://github.com/emacsmirror/erlang.git

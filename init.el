@@ -31,3 +31,8 @@
 ;; magit
 (add-to-list 'load-path "~/.emacs.d/lisp/magit")
 (require 'magit)
+
+;; erlang-mode
+(add-to-list 'load-path "~/.emacs.d/lisp/erlang")
+(require 'erlang-start)
+(require 'erlang-flymake)
