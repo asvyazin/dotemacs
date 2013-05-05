@@ -19,3 +19,6 @@
 [submodule "lisp/erlang"]
 	path = lisp/erlang
 	url = https://github.com/emacsmirror/erlang.git
+[submodule "lisp/emacs-elixir"]
+	path = lisp/emacs-elixir
+	url = https://github.com/elixir-lang/emacs-elixir.git
