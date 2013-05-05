@@ -22,3 +22,6 @@
 [submodule "lisp/emacs-elixir"]
 	path = lisp/emacs-elixir
 	url = https://github.com/elixir-lang/emacs-elixir.git
+[submodule "lisp/yasnippet"]
+	path = lisp/yasnippet
+	url = https://github.com/capitaomorte/yasnippet.git

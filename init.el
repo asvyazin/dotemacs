@@ -41,3 +41,9 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/emacs-elixir")
 (require 'elixir-mode-setup)
 (elixir-mode-setup)
+
+;; yasnippet
+(add-to-list 'load-path
+              "~/.emacs.d/lisp/yasnippet")
+(require 'yasnippet)
+(yas-global-mode 1)
