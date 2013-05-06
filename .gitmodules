@@ -31,3 +31,9 @@
 [submodule "lisp/dash"]
 	path = lisp/dash
 	url = https://github.com/magnars/dash.el.git
+[submodule "lisp/haskell-mode"]
+	path = lisp/haskell-mode
+	url = https://github.com/haskell/haskell-mode.git
+[submodule "lisp/ghc-mod"]
+	path = lisp/ghc-mod
+	url = https://github.com/emacsmirror/ghc-mod.git

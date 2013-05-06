@@ -46,3 +46,16 @@
               "~/.emacs.d/lisp/yasnippet")
 (require 'yasnippet)
 (yas-global-mode 1)
+
+;; haskell-mode
+(load "~/.emacs.d/lisp/haskell-mode/haskell-site-file")
+(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+
+;; ghc-mod
+;; you should have ghc-mod util already installed
+(add-to-list 'exec-path "~/.cabal/bin")
+(add-to-list 'load-path "~/.emacs.d/lisp/ghc-mod")
+(autoload 'ghc-init "ghc" nil t)
+(add-hook 'haskell-mode-hook (lambda () (ghc-init) (flymake-mode)))
+
