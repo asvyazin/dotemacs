@@ -62,7 +62,7 @@
 ;; slime
 ;; clozure-cl must be installed
 (add-to-list 'load-path "~/.emacs.d/lisp/slime")
-(setq inferior-lisp-program "ccl64")
+(setq inferior-lisp-program (getenv "CCL"))
 (require 'slime)
 (slime-setup '(slime-fancy))
 
