@@ -59,3 +59,13 @@
 (autoload 'ghc-init "ghc" nil t)
 (add-hook 'haskell-mode-hook (lambda () (ghc-init) (flymake-mode)))
 
+;; slime
+;; clozure-cl must be installed
+(add-to-list 'load-path "~/.emacs.d/lisp/slime")
+(setq inferior-lisp-program "ccl64")
+(require 'slime)
+(slime-setup '(slime-fancy))
+
+;; slime-company
+(add-to-list 'load-path "~/.emacs.d/lisp/slime-company")
+(slime-setup '(slime-company))

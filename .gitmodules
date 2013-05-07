@@ -37,3 +37,9 @@
 [submodule "lisp/ghc-mod"]
 	path = lisp/ghc-mod
 	url = https://github.com/emacsmirror/ghc-mod.git
+[submodule "lisp/slime-company"]
+	path = lisp/slime-company
+	url = https://github.com/emacsmirror/slime-company.git
+[submodule "lisp/slime"]
+	path = lisp/slime
+	url = https://github.com/emacsmirror/slime.git
