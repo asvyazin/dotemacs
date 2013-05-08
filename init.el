@@ -42,8 +42,8 @@
 (autoload 'distel-erlang-mode-hook "distel" nil t)
 (add-hook 'erlang-mode-hook 'distel-erlang-mode-hook)
 (setq inferior-erlang-machine-options
-      `("-sname" "emacs"
-	"-pz" ,(expand-file-name "~/.emacs.d/lisp/distel/ebin")))
+      (list "-sname" "emacs"
+	    "-pz" (expand-file-name "~/.emacs.d/lisp/distel/ebin")))
 
 ;; elixir-mode
 (add-to-list 'load-path "~/.emacs.d/lisp/emacs-elixir")
