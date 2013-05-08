@@ -43,3 +43,6 @@
 [submodule "lisp/slime"]
 	path = lisp/slime
 	url = https://github.com/emacsmirror/slime.git
+[submodule "lisp/distel"]
+	path = lisp/distel
+	url = https://github.com/massemanet/distel.git

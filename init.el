@@ -36,6 +36,15 @@
 (require 'erlang-start)
 (require 'erlang-flymake)
 
+;; distel
+;; run 'make' in ~/.emacs.d/lisp/distel
+(add-to-list 'load-path "~/.emacs.d/lisp/distel/elisp")
+(autoload 'distel-erlang-mode-hook "distel" nil t)
+(add-hook 'erlang-mode-hook 'distel-erlang-mode-hook)
+(setq inferior-erlang-machine-options
+      `("-sname" "emacs"
+	"-pz" ,(expand-file-name "~/.emacs.d/lisp/distel/ebin")))
+
 ;; elixir-mode
 (add-to-list 'load-path "~/.emacs.d/lisp/emacs-elixir")
 (require 'elixir-mode-setup)
