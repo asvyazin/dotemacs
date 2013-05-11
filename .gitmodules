@@ -52,3 +52,6 @@
 [submodule "lisp/fuel"]
 	path = lisp/fuel
 	url = https://github.com/mcandre/fuel.git
+[submodule "lisp/base16"]
+	path = lisp/base16
+	url = https://github.com/neil477/base16-emacs.git
