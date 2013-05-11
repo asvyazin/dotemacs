@@ -49,3 +49,6 @@
 [submodule "lisp/wrangler"]
 	path = lisp/wrangler
 	url = https://github.com/RefactoringTools/wrangler.git
+[submodule "lisp/fuel"]
+	path = lisp/fuel
+	url = https://github.com/mcandre/fuel.git

@@ -84,3 +84,6 @@
 ;; slime-company
 (add-to-list 'load-path "~/.emacs.d/lisp/slime-company")
 (slime-setup '(slime-company))
+
+;; factor-mode
+(load "~/.emacs.d/lisp/fuel/fuel-1.0/fu.el")
