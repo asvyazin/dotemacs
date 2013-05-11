@@ -43,7 +43,13 @@
 (add-hook 'erlang-mode-hook 'distel-erlang-mode-hook)
 (setq inferior-erlang-machine-options
       (list "-sname" "emacs"
-	    "-pz" (expand-file-name "~/.emacs.d/lisp/distel/ebin")))
+	    "-pz" (expand-file-name "~/.emacs.d/lisp/distel/ebin")
+	    "-pz" (expand-file-name "~/.emacs.d/lisp/wrangler/ebin")))
+
+;; wrangler
+(add-to-list 'load-path "~/.emacs.d/lisp/wrangler/elisp")
+(autoload 'wrangler-menu-init "wrangler" nil t)
+(add-hook 'erlang-mode-hook 'wrangler-menu-init)
 
 ;; elixir-mode
 (add-to-list 'load-path "~/.emacs.d/lisp/emacs-elixir")
