@@ -55,3 +55,6 @@
 [submodule "lisp/base16"]
 	path = lisp/base16
 	url = https://github.com/neil477/base16-emacs.git
+[submodule "lisp/pymacs"]
+	path = lisp/pymacs
+	url = https://github.com/pinard/Pymacs.git

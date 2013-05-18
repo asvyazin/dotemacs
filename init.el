@@ -94,6 +94,19 @@
 ;; base16
 (load "~/.emacs.d/lisp/base16/base16-theme-autoloads.el")
 
+;; pymacs
+;; build pymacs in lisp/pymacs first
+(add-to-list 'load-path "~/.emacs.d/lisp/pymacs")
+(autoload 'pymacs-apply "pymacs")
+(autoload 'pymacs-call "pymacs")
+(autoload 'pymacs-eval "pymacs" nil t)
+(autoload 'pymacs-exec "pymacs" nil t)
+(autoload 'pymacs-load "pymacs" nil t)
+(autoload 'pymacs-autoload "pymacs")
+
+;; rope
+;; Install rope, ropemode and ropemacs (pip install rope, pip install ropemode, pip install ropemacs). That's all!
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
