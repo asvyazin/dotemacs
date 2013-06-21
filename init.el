@@ -86,6 +86,7 @@
 (slime-setup '(slime-company))
 
 ;; factor-mode
+;; factor executable should be in PATH
 (load "~/.emacs.d/lisp/fuel/fuel-1.0/fu.el")
 (setq fuel-listener-factor-binary (executable-find "factor"))
 (setq factor-binary-directory (file-name-directory fuel-listener-factor-binary))
