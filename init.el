@@ -32,7 +32,7 @@
 (require 'magit)
 
 ;; erlang-mode
-(add-to-list 'load-path "~/.emacs.d/lisp/erlang")
+(add-to-list 'load-path "~/.emacs.d/lisp/erlang-mode")
 (require 'erlang-start)
 (require 'erlang-flymake)
 

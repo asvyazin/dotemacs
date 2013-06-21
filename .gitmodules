@@ -16,9 +16,6 @@
 [submodule "lisp/cl-lib"]
 	path = lisp/cl-lib
 	url = https://github.com/emacsmirror/cl-lib.git
-[submodule "lisp/erlang"]
-	path = lisp/erlang
-	url = https://github.com/emacsmirror/erlang.git
 [submodule "lisp/emacs-elixir"]
 	path = lisp/emacs-elixir
 	url = https://github.com/elixir-lang/emacs-elixir.git
@@ -58,3 +55,6 @@
 [submodule "lisp/pymacs"]
 	path = lisp/pymacs
 	url = https://github.com/pinard/Pymacs.git
+[submodule "lisp/erlang-mode"]
+	path = lisp/erlang-mode
+	url = https://github.com/asvyazin/erlang-mode.git
