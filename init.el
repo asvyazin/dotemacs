@@ -47,6 +47,7 @@
 	    "-pz" (expand-file-name "~/.emacs.d/lisp/wrangler/ebin")))
 
 ;; wrangler
+;; run ./configure and make in ~/.emacs.d/lisp/wrangler (works only on UNIX)
 (add-to-list 'load-path "~/.emacs.d/lisp/wrangler/elisp")
 (autoload 'wrangler-menu-init "wrangler" nil t)
 (add-hook 'erlang-mode-hook 'wrangler-menu-init)
@@ -76,8 +77,9 @@
 
 ;; slime
 ;; clozure-cl must be installed
+;; see http://ccl.clozure.com/manual/chapter2.3.html#command-line-setup 
 (add-to-list 'load-path "~/.emacs.d/lisp/slime")
-(setq inferior-lisp-program (getenv "CCL"))
+(setq inferior-lisp-program (executable-find "ccl"))
 (require 'slime)
 (slime-setup '(slime-fancy))
 
@@ -88,9 +90,9 @@
 ;; factor-mode
 ;; factor executable should be in PATH
 (load "~/.emacs.d/lisp/fuel/fuel-1.0/fu.el")
-(setq fuel-listener-factor-binary (executable-find "factor"))
-(setq factor-binary-directory (file-name-directory fuel-listener-factor-binary))
-(setq fuel-listener-factor-image (expand-file-name "factor.image" factor-binary-directory))
+;; (setq fuel-listener-factor-binary (executable-find "factor"))
+;; (setq factor-binary-directory (file-name-directory fuel-listener-factor-binary))
+;; (setq fuel-listener-factor-image (expand-file-name "factor.image" factor-binary-directory))
 
 ;; base16
 (load "~/.emacs.d/lisp/base16/base16-theme-autoloads.el")
