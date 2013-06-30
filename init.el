@@ -38,19 +38,13 @@
 
 ;; distel
 ;; run 'make' in ~/.emacs.d/lisp/distel
-(add-to-list 'load-path "~/.emacs.d/lisp/distel/elisp")
-(autoload 'distel-erlang-mode-hook "distel" nil t)
-(add-hook 'erlang-mode-hook 'distel-erlang-mode-hook)
-(setq inferior-erlang-machine-options
-      (list "-sname" "emacs"
-	    "-pz" (expand-file-name "~/.emacs.d/lisp/distel/ebin")
-	    "-pz" (expand-file-name "~/.emacs.d/lisp/wrangler/ebin")))
-
 ;; wrangler
 ;; run ./configure and make in ~/.emacs.d/lisp/wrangler (works only on UNIX)
+;; read INSTALL in wrangler directory and configure .erlang file
+;; on Windows use environment variable ERL_LIBS (read http://www.erlang.org/doc/man/code.html)
 (add-to-list 'load-path "~/.emacs.d/lisp/wrangler/elisp")
-(autoload 'wrangler-menu-init "wrangler" nil t)
-(add-hook 'erlang-mode-hook 'wrangler-menu-init)
+(add-to-list 'load-path "~/.emacs.d/lisp/distel/elisp")
+(require 'wrangler)
 
 ;; elixir-mode
 (add-to-list 'load-path "~/.emacs.d/lisp/emacs-elixir")
