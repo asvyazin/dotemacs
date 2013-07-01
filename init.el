@@ -1,4 +1,5 @@
 (ido-mode t)
+(setq x-select-enable-clipboard t) 
 
 ;; egg-mode
 (add-to-list 'load-path "~/.emacs.d/lisp/egg")
