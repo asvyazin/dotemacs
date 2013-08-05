@@ -11,6 +11,7 @@
 (require 'smartparens-config)
 (sp-use-smartparens-bindings)
 (smartparens-global-mode t)
+(show-smartparens-global-mode t)
 
 ;; smex
 (add-to-list 'load-path "~/.emacs.d/lisp/smex")
