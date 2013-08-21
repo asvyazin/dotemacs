@@ -1,5 +1,6 @@
 (ido-mode t)
-(setq x-select-enable-clipboard t) 
+(setq x-select-enable-clipboard t)
+(electric-indent-mode 1)
 
 ;; egg-mode
 (add-to-list 'load-path "~/.emacs.d/lisp/egg")
