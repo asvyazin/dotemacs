@@ -2,10 +2,6 @@
 (setq x-select-enable-clipboard t)
 (electric-indent-mode 1)
 
-;; egg-mode
-(add-to-list 'load-path "~/.emacs.d/lisp/egg")
-(autoload 'egg-status "egg" "Egg git mode." t)
-
 ;; smartparens
 (add-to-list 'load-path "~/.emacs.d/lisp/dash")
 (add-to-list 'load-path "~/.emacs.d/lisp/smartparens")
@@ -14,14 +10,6 @@
 (smartparens-global-mode t)
 (show-smartparens-global-mode t)
 
-;; smex
-(add-to-list 'load-path "~/.emacs.d/lisp/smex")
-(require 'smex)
-(smex-initialize)
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
-
 ;; company-mode
 (add-to-list 'load-path "~/.emacs.d/lisp/company-mode")
 (require 'company)
@@ -29,10 +17,6 @@
 
 ;; cl-lib
 (add-to-list 'load-path "~/.emacs.d/lisp/cl-lib")
-
-;; magit
-(add-to-list 'load-path "~/.emacs.d/lisp/magit")
-(require 'magit)
 
 ;; erlang-mode
 (add-to-list 'load-path "~/.emacs.d/lisp/erlang-mode")
@@ -53,12 +37,6 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/emacs-elixir")
 (require 'elixir-mode-setup)
 (elixir-mode-setup)
-
-;; yasnippet
-(add-to-list 'load-path
-              "~/.emacs.d/lisp/yasnippet")
-(require 'yasnippet)
-(yas-global-mode 1)
 
 ;; haskell-mode
 (load "~/.emacs.d/lisp/haskell-mode/haskell-site-file")
@@ -106,6 +84,25 @@
 
 ;; rope
 ;; Install rope, ropemode and ropemacs (pip install rope, pip install ropemode, pip install ropemacs). That's all!
+
+(require 'cask "~/.cask/cask.el")
+(cask-initialize)
+
+;;smex
+(smex-initialize)
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
+;; yasnippet
+(yas-global-mode 1)
+
+;; go
+(add-to-list 'load-path "~/.emacs.d/lisp/go-mode")
+(require 'go-mode)
+(add-to-list 'load-path "~/.emacs.d/lisp/goflymake")
+(require 'go-flymake)
+(require 'go-flycheck)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

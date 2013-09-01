@@ -58,3 +58,12 @@
 [submodule "lisp/erlang-mode"]
 	path = lisp/erlang-mode
 	url = https://github.com/asvyazin/erlang-mode.git
+[submodule "lisp/go-mode"]
+	path = lisp/go-mode
+	url = https://github.com/dominikh/go-mode.el.git
+[submodule "lisp/goflymake"]
+	path = lisp/goflymake
+	url = https://github.com/dougm/goflymake.git
+[submodule "lisp/flycheck"]
+	path = lisp/flycheck
+	url = https://github.com/flycheck/flycheck.git
