@@ -15,9 +15,6 @@
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
 
-;; cl-lib
-(add-to-list 'load-path "~/.emacs.d/lisp/cl-lib")
-
 ;; erlang-mode
 (add-to-list 'load-path "~/.emacs.d/lisp/erlang-mode")
 (require 'erlang-start)
