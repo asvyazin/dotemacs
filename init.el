@@ -2,14 +2,6 @@
 (setq x-select-enable-clipboard t)
 (electric-indent-mode 1)
 
-;; smartparens
-(add-to-list 'load-path "~/.emacs.d/lisp/dash")
-(add-to-list 'load-path "~/.emacs.d/lisp/smartparens")
-(require 'smartparens-config)
-(sp-use-smartparens-bindings)
-(smartparens-global-mode t)
-(show-smartparens-global-mode t)
-
 ;; company-mode
 (add-to-list 'load-path "~/.emacs.d/lisp/company-mode")
 (require 'company)
@@ -100,6 +92,13 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/goflymake")
 (require 'go-flymake)
 (require 'go-flycheck)
+
+;; smartparens
+(add-to-list 'load-path "~/.emacs.d/lisp/smartparens")
+(require 'smartparens-config)
+(sp-use-smartparens-bindings)
+(smartparens-global-mode t)
+(show-smartparens-global-mode t)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
