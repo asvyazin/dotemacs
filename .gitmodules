@@ -1,9 +1,3 @@
-[submodule "lisp/haskell-mode"]
-	path = lisp/haskell-mode
-	url = https://github.com/haskell/haskell-mode.git
-[submodule "lisp/ghc-mod"]
-	path = lisp/ghc-mod
-	url = https://github.com/emacsmirror/ghc-mod.git
 [submodule "lisp/slime-company"]
 	path = lisp/slime-company
 	url = https://github.com/emacsmirror/slime-company.git

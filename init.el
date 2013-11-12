@@ -2,18 +2,6 @@
 (setq x-select-enable-clipboard t)
 (electric-indent-mode 1)
 
-;; haskell-mode
-(load "~/.emacs.d/lisp/haskell-mode/haskell-site-file")
-(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
-(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
-
-;; ghc-mod
-;; you should have ghc-mod util already installed
-(add-to-list 'exec-path "~/.cabal/bin")
-(add-to-list 'load-path "~/.emacs.d/lisp/ghc-mod/elisp")
-(autoload 'ghc-init "ghc" nil t)
-(add-hook 'haskell-mode-hook (lambda () (ghc-init) (flymake-mode)))
-
 ;; factor-mode
 ;; factor executable should be in PATH
 (load "~/.emacs.d/lisp/fuel/fuel-1.0/fu.el")
@@ -91,6 +79,18 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/wrangler/elisp")
 (add-to-list 'load-path "~/.emacs.d/lisp/distel/elisp")
 (require 'wrangler)
+
+;; haskell-mode
+(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
+
+;; ghc-mod
+;; you should have ghc-mod util already installed
+(add-to-list 'exec-path "~/.cabal/bin")
+(autoload 'ghc-init "ghc" nil t)
+(add-hook 'haskell-mode-hook (lambda () (ghc-init))
+(add-hook 'haskell-mode-hook 'turn-on-hi2)
+(require 'flymake-haskell-multi)
+(add-hook 'haskell-mode-hook 'flymake-haskell-multi-load)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
