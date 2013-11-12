@@ -2,11 +2,6 @@
 (setq x-select-enable-clipboard t)
 (electric-indent-mode 1)
 
-;; company-mode
-(add-to-list 'load-path "~/.emacs.d/lisp/company-mode")
-(require 'company)
-(add-hook 'after-init-hook 'global-company-mode)
-
 ;; erlang-mode
 (add-to-list 'load-path "~/.emacs.d/lisp/erlang-mode")
 (require 'erlang-start)
@@ -47,10 +42,6 @@
 (require 'slime)
 (slime-setup '(slime-fancy))
 
-;; slime-company
-(add-to-list 'load-path "~/.emacs.d/lisp/slime-company")
-(slime-setup '(slime-company))
-
 ;; factor-mode
 ;; factor executable should be in PATH
 (load "~/.emacs.d/lisp/fuel/fuel-1.0/fu.el")
@@ -76,6 +67,7 @@
 
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
+(require 'pallet)
 
 ;;smex
 (smex-initialize)
@@ -99,6 +91,13 @@
 (sp-use-smartparens-bindings)
 (smartparens-global-mode t)
 (show-smartparens-global-mode t)
+
+;; company
+(add-hook 'after-init-hook 'global-company-mode)
+
+;; slime-company
+(add-to-list 'load-path "~/.emacs.d/lisp/slime-company")
+(slime-setup '(slime-company))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
