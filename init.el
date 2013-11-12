@@ -17,11 +17,6 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/distel/elisp")
 (require 'wrangler)
 
-;; elixir-mode
-(add-to-list 'load-path "~/.emacs.d/lisp/emacs-elixir")
-(require 'elixir-mode-setup)
-(elixir-mode-setup)
-
 ;; haskell-mode
 (load "~/.emacs.d/lisp/haskell-mode/haskell-site-file")
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
@@ -95,6 +90,10 @@
 ;; slime-company
 (add-to-list 'load-path "~/.emacs.d/lisp/slime-company")
 (slime-setup '(slime-company))
+
+;; elixir-mode
+(require 'elixir-mode-setup)
+(elixir-mode-setup)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

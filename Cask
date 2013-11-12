@@ -7,6 +7,8 @@
 (depends-on "company")
 (depends-on "dash")
 (depends-on "drag-stuff")
+(depends-on "elixir-mode")
+(depends-on "elixir-yasnippets")
 (depends-on "epl")
 (depends-on "expand-region")
 (depends-on "f")

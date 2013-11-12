@@ -1,9 +1,6 @@
 [submodule "lisp/paredit"]
 	path = lisp/paredit
 	url = https://github.com/emacsmirror/paredit.git
-[submodule "lisp/emacs-elixir"]
-	path = lisp/emacs-elixir
-	url = https://github.com/elixir-lang/emacs-elixir.git
 [submodule "lisp/smartparens"]
 	path = lisp/smartparens
 	url = https://github.com/Fuco1/smartparens.git
