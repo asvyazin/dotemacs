@@ -29,14 +29,6 @@
 (autoload 'ghc-init "ghc" nil t)
 (add-hook 'haskell-mode-hook (lambda () (ghc-init) (flymake-mode)))
 
-;; slime
-;; clozure-cl must be installed
-;; see http://ccl.clozure.com/manual/chapter2.3.html#command-line-setup 
-(add-to-list 'load-path "~/.emacs.d/lisp/slime")
-(setq inferior-lisp-program (executable-find "ccl"))
-(require 'slime)
-(slime-setup '(slime-fancy))
-
 ;; factor-mode
 ;; factor executable should be in PATH
 (load "~/.emacs.d/lisp/fuel/fuel-1.0/fu.el")
@@ -80,10 +72,6 @@
 ;; company
 (add-hook 'after-init-hook 'global-company-mode)
 
-;; slime-company
-(add-to-list 'load-path "~/.emacs.d/lisp/slime-company")
-(slime-setup '(slime-company))
-
 ;; elixir-mode
 (require 'elixir-mode-setup)
 (elixir-mode-setup)
@@ -93,6 +81,17 @@
 (sp-use-smartparens-bindings)
 (smartparens-global-mode t)
 (show-smartparens-global-mode t)
+
+;; slime
+;; clozure-cl must be installed
+;; see http://ccl.clozure.com/manual/chapter2.3.html#command-line-setup 
+(setq inferior-lisp-program (executable-find "ccl"))
+(require 'slime)
+(slime-setup '(slime-fancy))
+
+;; slime-company
+(add-to-list 'load-path "~/.emacs.d/lisp/slime-company")
+(slime-setup '(slime-company))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
