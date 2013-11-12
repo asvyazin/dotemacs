@@ -7,12 +7,6 @@
 [submodule "lisp/wrangler"]
 	path = lisp/wrangler
 	url = https://github.com/RefactoringTools/wrangler.git
-[submodule "lisp/fuel"]
-	path = lisp/fuel
-	url = https://github.com/mcandre/fuel.git
-[submodule "lisp/pymacs"]
-	path = lisp/pymacs
-	url = https://github.com/pinard/Pymacs.git
 [submodule "lisp/goflymake"]
 	path = lisp/goflymake
 	url = https://github.com/dougm/goflymake.git

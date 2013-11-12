@@ -2,13 +2,6 @@
 (setq x-select-enable-clipboard t)
 (electric-indent-mode 1)
 
-;; factor-mode
-;; factor executable should be in PATH
-(load "~/.emacs.d/lisp/fuel/fuel-1.0/fu.el")
-;; (setq fuel-listener-factor-binary (executable-find "factor"))
-;; (setq factor-binary-directory (file-name-directory fuel-listener-factor-binary))
-;; (setq fuel-listener-factor-image (expand-file-name "factor.image" factor-binary-directory))
-
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
 (require 'pallet)
@@ -89,6 +82,12 @@
 
 ;; rope
 ;; Install rope, ropemode and ropemacs (pip install rope, pip install ropemode, pip install ropemacs). That's all!
+
+;; factor-mode
+;; factor executable should be in PATH
+;; (setq fuel-listener-factor-binary (executable-find "factor"))
+;; (setq factor-binary-directory (file-name-directory fuel-listener-factor-binary))
+;; (setq fuel-listener-factor-image (expand-file-name "factor.image" factor-binary-directory))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

@@ -17,6 +17,7 @@
 (depends-on "flymake-easy")
 (depends-on "flymake-elixir")
 (depends-on "flymake-haskell-multi")
+(depends-on "fuel")
 (depends-on "ghc")
 (depends-on "git-commit-mode")
 (depends-on "git-rebase-mode")
