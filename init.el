@@ -16,18 +16,17 @@
 (yas-global-mode 1)
 
 ;; go
-(require 'go-mode)
+(require 'go-mode-autoloads)
 (add-to-list 'load-path "~/.emacs.d/lisp/goflymake")
 (require 'go-flymake)
 (require 'go-flycheck)
-(require 'go-autocomplete)
+(require 'go-autocomplete-autoloads)
 
 ;; company
 (add-hook 'after-init-hook 'global-company-mode)
 
 ;; elixir-mode
-(require 'elixir-mode-setup)
-(elixir-mode-setup)
+(require 'elixir-mode-autoloads)
 
 ;; smartparens
 (require 'smartparens-config)
@@ -39,7 +38,7 @@
 ;; clozure-cl must be installed
 ;; see http://ccl.clozure.com/manual/chapter2.3.html#command-line-setup 
 (setq inferior-lisp-program (executable-find "ccl"))
-(require 'slime)
+(require 'slime-autoloads)
 (slime-setup '(slime-fancy))
 
 ;; slime-company
@@ -47,7 +46,7 @@
 (slime-setup '(slime-company))
 
 ;; erlang-mode
-(require 'erlang-start)
+(require 'erlang-autoloads)
 (require 'erlang-flymake)
 
 ;; distel
@@ -66,10 +65,10 @@
 ;; ghc-mod
 ;; you should have ghc-mod util already installed
 (add-to-list 'exec-path "~/.cabal/bin")
-(autoload 'ghc-init "ghc" nil t)
-(add-hook 'haskell-mode-hook (lambda () (ghc-init))
+(require 'ghc-autoloads)
+(add-hook 'haskell-mode-hook 'ghc-init)
 (add-hook 'haskell-mode-hook 'turn-on-hi2)
-(require 'flymake-haskell-multi)
+(require 'flymake-haskell-multi-autoloads)
 (add-hook 'haskell-mode-hook 'flymake-haskell-multi-load)
 
 ;; pymacs
