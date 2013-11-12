@@ -77,13 +77,6 @@
 (require 'go-flycheck)
 (require 'go-autocomplete)
 
-;; smartparens
-(add-to-list 'load-path "~/.emacs.d/lisp/smartparens")
-(require 'smartparens-config)
-(sp-use-smartparens-bindings)
-(smartparens-global-mode t)
-(show-smartparens-global-mode t)
-
 ;; company
 (add-hook 'after-init-hook 'global-company-mode)
 
@@ -94,6 +87,12 @@
 ;; elixir-mode
 (require 'elixir-mode-setup)
 (elixir-mode-setup)
+
+;; smartparens
+(require 'smartparens-config)
+(sp-use-smartparens-bindings)
+(smartparens-global-mode t)
+(show-smartparens-global-mode t)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
