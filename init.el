@@ -9,19 +9,6 @@
 ;; (setq factor-binary-directory (file-name-directory fuel-listener-factor-binary))
 ;; (setq fuel-listener-factor-image (expand-file-name "factor.image" factor-binary-directory))
 
-;; pymacs
-;; build pymacs in lisp/pymacs first
-(add-to-list 'load-path "~/.emacs.d/lisp/pymacs")
-(autoload 'pymacs-apply "pymacs")
-(autoload 'pymacs-call "pymacs")
-(autoload 'pymacs-eval "pymacs" nil t)
-(autoload 'pymacs-exec "pymacs" nil t)
-(autoload 'pymacs-load "pymacs" nil t)
-(autoload 'pymacs-autoload "pymacs")
-
-;; rope
-;; Install rope, ropemode and ropemacs (pip install rope, pip install ropemode, pip install ropemacs). That's all!
-
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
 (require 'pallet)
@@ -91,6 +78,17 @@
 (add-hook 'haskell-mode-hook 'turn-on-hi2)
 (require 'flymake-haskell-multi)
 (add-hook 'haskell-mode-hook 'flymake-haskell-multi-load)
+
+;; pymacs
+(autoload 'pymacs-apply "pymacs")
+(autoload 'pymacs-call "pymacs")
+(autoload 'pymacs-eval "pymacs" nil t)
+(autoload 'pymacs-exec "pymacs" nil t)
+(autoload 'pymacs-load "pymacs" nil t)
+(autoload 'pymacs-autoload "pymacs")
+
+;; rope
+;; Install rope, ropemode and ropemacs (pip install rope, pip install ropemode, pip install ropemacs). That's all!
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

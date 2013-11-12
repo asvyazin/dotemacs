@@ -35,6 +35,7 @@
 (depends-on "pkg-info")
 (depends-on "popwin")
 (depends-on "projectile")
+(depends-on "pymacs")
 (depends-on "s")
 (depends-on "scala-mode2")
 (depends-on "slime")
