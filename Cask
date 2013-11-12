@@ -14,6 +14,8 @@
 (depends-on "expand-region")
 (depends-on "f")
 (depends-on "flycheck")
+(depends-on "flymake-easy")
+(depends-on "flymake-elixir")
 (depends-on "git-commit-mode")
 (depends-on "git-rebase-mode")
 (depends-on "go-autocomplete")
