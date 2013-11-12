@@ -2,21 +2,6 @@
 (setq x-select-enable-clipboard t)
 (electric-indent-mode 1)
 
-;; erlang-mode
-(add-to-list 'load-path "~/.emacs.d/lisp/erlang-mode")
-(require 'erlang-start)
-(require 'erlang-flymake)
-
-;; distel
-;; run 'make' in ~/.emacs.d/lisp/distel
-;; wrangler
-;; run ./configure and make in ~/.emacs.d/lisp/wrangler (works only on UNIX)
-;; read INSTALL in wrangler directory and configure .erlang file
-;; on Windows use environment variable ERL_LIBS (read http://www.erlang.org/doc/man/code.html)
-(add-to-list 'load-path "~/.emacs.d/lisp/wrangler/elisp")
-(add-to-list 'load-path "~/.emacs.d/lisp/distel/elisp")
-(require 'wrangler)
-
 ;; haskell-mode
 (load "~/.emacs.d/lisp/haskell-mode/haskell-site-file")
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
@@ -92,6 +77,20 @@
 ;; slime-company
 (add-to-list 'load-path "~/.emacs.d/lisp/slime-company")
 (slime-setup '(slime-company))
+
+;; erlang-mode
+(require 'erlang-start)
+(require 'erlang-flymake)
+
+;; distel
+;; run 'make' in ~/.emacs.d/lisp/distel
+;; wrangler
+;; run ./configure and make in ~/.emacs.d/lisp/wrangler (works only on UNIX)
+;; read INSTALL in wrangler directory and configure .erlang file
+;; on Windows use environment variable ERL_LIBS (read http://www.erlang.org/doc/man/code.html)
+(add-to-list 'load-path "~/.emacs.d/lisp/wrangler/elisp")
+(add-to-list 'load-path "~/.emacs.d/lisp/distel/elisp")
+(require 'wrangler)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

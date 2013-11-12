@@ -10,6 +10,7 @@
 (depends-on "elixir-mode")
 (depends-on "elixir-yasnippets")
 (depends-on "epl")
+(depends-on "erlang")
 (depends-on "expand-region")
 (depends-on "f")
 (depends-on "flycheck")
