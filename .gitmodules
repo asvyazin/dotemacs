@@ -34,18 +34,12 @@
 [submodule "lisp/fuel"]
 	path = lisp/fuel
 	url = https://github.com/mcandre/fuel.git
-[submodule "lisp/base16"]
-	path = lisp/base16
-	url = https://github.com/neil477/base16-emacs.git
 [submodule "lisp/pymacs"]
 	path = lisp/pymacs
 	url = https://github.com/pinard/Pymacs.git
 [submodule "lisp/erlang-mode"]
 	path = lisp/erlang-mode
 	url = https://github.com/asvyazin/erlang-mode.git
-[submodule "lisp/go-mode"]
-	path = lisp/go-mode
-	url = https://github.com/dominikh/go-mode.el.git
 [submodule "lisp/goflymake"]
 	path = lisp/goflymake
 	url = https://github.com/dougm/goflymake.git

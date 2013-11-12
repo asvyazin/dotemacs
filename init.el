@@ -49,9 +49,6 @@
 ;; (setq factor-binary-directory (file-name-directory fuel-listener-factor-binary))
 ;; (setq fuel-listener-factor-image (expand-file-name "factor.image" factor-binary-directory))
 
-;; base16
-(load "~/.emacs.d/lisp/base16/base16-theme-autoloads.el")
-
 ;; pymacs
 ;; build pymacs in lisp/pymacs first
 (add-to-list 'load-path "~/.emacs.d/lisp/pymacs")

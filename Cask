@@ -2,6 +2,7 @@
 (source "marmalade" "http://marmalade-repo.org/packages/")
 (source "gnu" "http://elpa.gnu.org/packages/")
 
+(depends-on "base16-theme")
 (depends-on "cask")
 (depends-on "company")
 (depends-on "dash")
