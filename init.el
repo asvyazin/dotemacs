@@ -79,11 +79,11 @@
 (yas-global-mode 1)
 
 ;; go
-(add-to-list 'load-path "~/.emacs.d/lisp/go-mode")
 (require 'go-mode)
 (add-to-list 'load-path "~/.emacs.d/lisp/goflymake")
 (require 'go-flymake)
 (require 'go-flycheck)
+(require 'go-autocomplete)
 
 ;; smartparens
 (add-to-list 'load-path "~/.emacs.d/lisp/smartparens")
