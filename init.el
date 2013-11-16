@@ -5,6 +5,8 @@
 (cask-initialize)
 (require 'pallet)
 
+(require 'typescript "~/.emacs.d/lisp/TypeScript/TypeScript.el")
+
 ;;smex
 (smex-initialize)
 (global-set-key (kbd "M-x") 'smex)
