@@ -1,6 +1,5 @@
 (ido-mode t)
 (setq x-select-enable-clipboard t)
-(electric-indent-mode 1)
 
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
@@ -67,9 +66,8 @@
 (add-to-list 'exec-path "~/.cabal/bin")
 (require 'ghc-autoloads)
 (add-hook 'haskell-mode-hook 'ghc-init)
+(add-hook 'haskell-mode-hook 'flymake-mode)
 (add-hook 'haskell-mode-hook 'turn-on-hi2)
-(require 'flymake-haskell-multi-autoloads)
-(add-hook 'haskell-mode-hook 'flymake-haskell-multi-load)
 
 ;; pymacs
 (autoload 'pymacs-apply "pymacs")
