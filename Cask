@@ -1,6 +1,6 @@
-(source "melpa" "http://melpa.milkbox.net/packages/")
-(source "marmalade" "http://marmalade-repo.org/packages/")
-(source "gnu" "http://elpa.gnu.org/packages/")
+(source melpa)
+(source marmalade)
+(source gnu)
 
 (depends-on "auto-complete")
 (depends-on "base16-theme")
@@ -15,6 +15,7 @@
 (depends-on "expand-region")
 (depends-on "f")
 (depends-on "flycheck")
+(depends-on "flymake-easy")
 (depends-on "flymake-elixir")
 (depends-on "fuel")
 (depends-on "ghc")
