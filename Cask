@@ -36,6 +36,7 @@
 (depends-on "nose")
 (depends-on "pallet")
 (depends-on "pkg-info")
+(depends-on "popup")
 (depends-on "popwin")
 (depends-on "projectile")
 (depends-on "pymacs")
