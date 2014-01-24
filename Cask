@@ -25,6 +25,7 @@
 (depends-on "flycheck")
 (depends-on "flymake-easy")
 (depends-on "flymake-elixir")
+(depends-on "framemove")
 (depends-on "fuel")
 (depends-on "ghc")
 (depends-on "git-commit")
