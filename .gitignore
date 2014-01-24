@@ -4,3 +4,5 @@ eshell
 .cask
 url
 server
+projectile-bookmarks.eld
+projectile.cache
