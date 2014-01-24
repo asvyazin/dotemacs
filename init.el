@@ -88,6 +88,9 @@
 ;; (setq factor-binary-directory (file-name-directory fuel-listener-factor-binary))
 ;; (setq fuel-listener-factor-image (expand-file-name "factor.image" factor-binary-directory))
 
+;; windmove
+(windmove-default-keybindings)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
