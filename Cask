@@ -23,6 +23,7 @@
 (depends-on "flx")
 (depends-on "flx-ido")
 (depends-on "flycheck")
+(depends-on "flycheck-haskell")
 (depends-on "flymake-easy")
 (depends-on "flymake-elixir")
 (depends-on "framemove")
