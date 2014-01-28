@@ -68,7 +68,7 @@
 (add-to-list 'exec-path "~/.cabal/bin")
 (require 'ghc-autoloads)
 (add-hook 'haskell-mode-hook 'ghc-init)
-(add-hook 'haskell-mode-hook 'flymake-mode)
+(add-hook 'haskell-mode-hook 'flycheck-mode)
 (add-hook 'haskell-mode-hook 'turn-on-hi2)
 
 ;; pymacs
