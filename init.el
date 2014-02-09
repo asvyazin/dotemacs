@@ -70,6 +70,12 @@
 (add-hook 'haskell-mode-hook 'ghc-init)
 (add-hook 'haskell-mode-hook 'flycheck-mode)
 (add-hook 'haskell-mode-hook 'turn-on-hi2)
+(eval-after-load 'flycheck
+  '(add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))
+
+;; flycheck
+(eval-after-load 'flycheck
+  '(add-hook 'flycheck-mode-hook #'flycheck-cask-setup))
 
 ;; pymacs
 (autoload 'pymacs-apply "pymacs")
@@ -96,10 +102,6 @@
 
 ;; projectile
 (projectile-global-mode)
-
-;; flycheck
-(eval-after-load 'flycheck
-  '(add-hook 'flycheck-mode-hook #'flycheck-cask-setup))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
