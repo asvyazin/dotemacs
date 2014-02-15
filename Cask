@@ -38,6 +38,7 @@
 (depends-on "go-autocomplete")
 (depends-on "go-mode")
 (depends-on "go-snippets")
+(depends-on "hamlet-mode")
 (depends-on "haskell-mode")
 (depends-on "hi2")
 (depends-on "highlight-indentation")
