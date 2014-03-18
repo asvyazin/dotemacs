@@ -30,6 +30,7 @@
 (depends-on "flycheck-haskell")
 (depends-on "flymake-easy")
 (depends-on "flymake-elixir")
+(depends-on "flymake-yaml")
 (depends-on "framemove")
 (depends-on "fuel")
 (depends-on "ghc")
@@ -70,4 +71,5 @@
 (depends-on "web")
 (depends-on "web-server")
 (depends-on "wrap-region")
+(depends-on "yaml-mode")
 (depends-on "yasnippet")
