@@ -60,6 +60,10 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/distel/elisp")
 (require 'wrangler)
 
+;; lilypond-mode
+(add-to-list 'load-path "~/.emacs.d/lisp/lilypond")
+(load "~/.emacs.d/lisp/lilypond/lilypond-init.el")
+
 ;; haskell-mode
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 
