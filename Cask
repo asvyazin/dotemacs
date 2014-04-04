@@ -54,6 +54,7 @@
 (depends-on "multiple-cursors")
 (depends-on "noflet")
 (depends-on "nose")
+(depends-on "package-build")
 (depends-on "pallet")
 (depends-on "pkg-info")
 (depends-on "popup")
