@@ -1,4 +1,5 @@
 (ido-mode t)
+(tool-bar-mode -1)
 (setq x-select-enable-clipboard t)
 
 (require 'cask "~/.cask/cask.el")
