@@ -75,12 +75,12 @@
 ;; you should have ghc-mod util already installed
 (add-to-list 'exec-path "~/.cabal/bin")
 (require 'ghc-autoloads)
-(add-hook 'haskell-mode-hook 'ghc-init)
+;(add-hook 'haskell-mode-hook 'ghc-init)
 (add-hook 'haskell-mode-hook 'flycheck-mode)
 (add-hook 'haskell-mode-hook 'turn-on-hi2)
-(eval-after-load 'flycheck
-  '(add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))
-;(eval-after-load 'flycheck '(require 'flycheck-hdevtools))
+;(eval-after-load 'flycheck
+;  '(add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))
+(eval-after-load 'flycheck '(require 'flycheck-hdevtools))
 
 ;; flycheck
 (eval-after-load 'flycheck
