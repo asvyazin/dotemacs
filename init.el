@@ -19,17 +19,12 @@
 (yas-global-mode 1)
 
 ;; go
-(require 'go-mode-autoloads)
 (add-to-list 'load-path "~/.emacs.d/lisp/goflymake")
 (require 'go-flymake)
 (require 'go-flycheck)
-(require 'go-autocomplete-autoloads)
 
 ;; company
 (add-hook 'after-init-hook 'global-company-mode)
-
-;; elixir-mode
-(require 'elixir-mode-autoloads)
 
 ;; smartparens
 (require 'smartparens-config)
@@ -49,7 +44,6 @@
 (slime-setup '(slime-company))
 
 ;; erlang-mode
-(require 'erlang-autoloads)
 (require 'erlang-flymake)
 
 ;; distel
@@ -86,7 +80,7 @@
 ;; ghc-mod
 ;; you should have ghc-mod util already installed
 (add-to-list 'exec-path "~/.cabal/bin")
-(require 'ghc-autoloads)
+
 ;(add-hook 'haskell-mode-hook 'ghc-init)
 (add-hook 'haskell-mode-hook 'flycheck-mode)
 (add-hook 'haskell-mode-hook 'turn-on-hi2)
