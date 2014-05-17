@@ -7,6 +7,7 @@
 (depends-on "commander")
 (depends-on "company")
 (depends-on "creole")
+(depends-on "dash")
 (depends-on "drag-stuff")
 (depends-on "elixir-mode")
 (depends-on "elixir-yasnippets")
