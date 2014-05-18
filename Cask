@@ -11,6 +11,7 @@
 (depends-on "company-ghc")
 (depends-on "creole")
 (depends-on "dash")
+(depends-on "discover-my-major")
 (depends-on "drag-stuff")
 (depends-on "elixir-mode")
 (depends-on "elixir-yasnippets")
