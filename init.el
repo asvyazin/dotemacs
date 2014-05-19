@@ -118,6 +118,8 @@
 ;; projectile
 (projectile-global-mode)
 
+(global-set-key (kbd "<escape>") 'god-local-mode)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
