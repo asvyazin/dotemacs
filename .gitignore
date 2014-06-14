@@ -6,3 +6,5 @@ url
 server
 projectile-bookmarks.eld
 projectile.cache
+init.el.local
+tramp

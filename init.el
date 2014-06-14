@@ -120,6 +120,9 @@
 
 (global-set-key (kbd "<escape>") 'god-local-mode)
 
+(if (file-exists-p "~/.emacs.d/init.el.local")
+    (load "~/.emacs.d/init.el.local"))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
