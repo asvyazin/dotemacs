@@ -45,6 +45,7 @@
 (depends-on "livescript-mode")
 (depends-on "magit")
 (depends-on "multiple-cursors")
+(depends-on "nix-mode")
 (depends-on "noflet")
 (depends-on "nose")
 (depends-on "pallet")

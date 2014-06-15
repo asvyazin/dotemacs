@@ -84,8 +84,8 @@
 ;(add-hook 'haskell-mode-hook 'ghc-init)
 (add-hook 'haskell-mode-hook 'flycheck-mode)
 (add-hook 'haskell-mode-hook 'turn-on-hi2)
-;(eval-after-load 'flycheck
-;  '(add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))
+(eval-after-load 'flycheck
+  '(add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))
 (eval-after-load 'flycheck '(require 'flycheck-hdevtools))
 
 ;; flycheck
