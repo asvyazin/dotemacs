@@ -8,6 +8,7 @@
 (depends-on "cask")
 (depends-on "commander")
 (depends-on "company")
+(depends-on "company-ghc")
 (depends-on "creole")
 (depends-on "dash")
 (depends-on "drag-stuff")
