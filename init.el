@@ -81,12 +81,12 @@
 ;; you should have ghc-mod util already installed
 (add-to-list 'exec-path "~/.cabal/bin")
 
-;(add-hook 'haskell-mode-hook 'ghc-init)
+(add-hook 'haskell-mode-hook 'ghc-init)
 (add-hook 'haskell-mode-hook 'flycheck-mode)
 (add-hook 'haskell-mode-hook 'turn-on-hi2)
 (eval-after-load 'flycheck
   '(add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))
-(eval-after-load 'flycheck '(require 'flycheck-hdevtools))
+; (eval-after-load 'flycheck '(require 'flycheck-hdevtools))
 
 ;; flycheck
 (eval-after-load 'flycheck
@@ -118,10 +118,11 @@
 ;; projectile
 (projectile-global-mode)
 
-(global-set-key (kbd "<escape>") 'god-local-mode)
-
 (if (file-exists-p "~/.emacs.d/init.el.local")
     (load "~/.emacs.d/init.el.local"))
+
+;; god-mode
+(global-set-key (kbd "<escape>") 'god-local-mode)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
