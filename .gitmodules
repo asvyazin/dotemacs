@@ -1,9 +1,6 @@
 [submodule "lisp/slime-company"]
 	path = lisp/slime-company
 	url = https://github.com/emacsmirror/slime-company.git
-[submodule "lisp/distel"]
-	path = lisp/distel
-	url = https://github.com/massemanet/distel.git
 [submodule "lisp/wrangler"]
 	path = lisp/wrangler
 	url = https://github.com/RefactoringTools/wrangler.git

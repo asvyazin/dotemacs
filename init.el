@@ -46,16 +46,6 @@
 ;; erlang-mode
 (require 'erlang-flymake)
 
-;; distel
-;; run 'make' in ~/.emacs.d/lisp/distel
-;; wrangler
-;; run ./configure and make in ~/.emacs.d/lisp/wrangler (works only on UNIX)
-;; read INSTALL in wrangler directory and configure .erlang file
-;; on Windows use environment variable ERL_LIBS (read http://www.erlang.org/doc/man/code.html)
-(add-to-list 'load-path "~/.emacs.d/lisp/wrangler/elisp")
-(add-to-list 'load-path "~/.emacs.d/lisp/distel/elisp")
-(require 'wrangler)
-
 ;; lilypond-mode
 (add-to-list 'load-path "~/.emacs.d/lisp/lilypond")
 (autoload 'LilyPond-mode "lilypond-mode" "LilyPond Editing Mode" t)
