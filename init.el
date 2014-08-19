@@ -118,6 +118,10 @@
 (require 'edit-server)
 (edit-server-start)
 
+;; ace-jump-mode
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+(define-key global-map (kbd "C-c b") 'ace-jump-buffer)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

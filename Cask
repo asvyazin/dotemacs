@@ -2,6 +2,8 @@
 (source marmalade)
 (source melpa)
 
+(depends-on "ace-jump-buffer")
+(depends-on "ace-jump-mode")
 (depends-on "ansi")
 (depends-on "auto-complete")
 (depends-on "base16-theme")
@@ -28,6 +30,7 @@
 (depends-on "flycheck-cask")
 (depends-on "flycheck-haskell")
 (depends-on "flycheck-hdevtools")
+(depends-on "flycheck-rust")
 (depends-on "flymake-easy")
 (depends-on "flymake-elixir")
 (depends-on "flymake-yaml")
