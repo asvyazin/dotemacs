@@ -11,6 +11,8 @@
 (depends-on "commander")
 (depends-on "company")
 (depends-on "company-ghc")
+(depends-on "company-ghc")
+(depends-on "company-go")
 (depends-on "creole")
 (depends-on "dash")
 (depends-on "discover-my-major")

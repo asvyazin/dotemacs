@@ -25,6 +25,8 @@
 
 ;; company
 (add-hook 'after-init-hook 'global-company-mode)
+(add-to-list 'company-backends 'company-ghc)
+(add-to-list 'company-backends 'company-go)
 
 ;; smartparens
 (require 'smartparens-config)
