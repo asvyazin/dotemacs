@@ -24,7 +24,7 @@
 (require 'go-flycheck)
 
 ;; company
-(add-hook 'after-init-hook 'global-company-mode)
+(global-company-mode)
 (add-to-list 'company-backends 'company-ghc)
 (add-to-list 'company-backends 'company-go)
 
