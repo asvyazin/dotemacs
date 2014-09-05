@@ -24,6 +24,7 @@
 (require 'go-flycheck)
 
 ;; company
+(require 'company)
 (global-company-mode)
 (add-to-list 'company-backends 'company-ghc)
 (add-to-list 'company-backends 'company-go)
