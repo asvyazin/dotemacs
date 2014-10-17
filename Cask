@@ -5,6 +5,7 @@
 (depends-on "ace-jump-buffer")
 (depends-on "ace-jump-mode")
 (depends-on "ace-jump-zap")
+(depends-on "aggressive-indent")
 (depends-on "ansi")
 (depends-on "auto-complete")
 (depends-on "base16-theme")
