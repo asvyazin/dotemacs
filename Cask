@@ -55,6 +55,7 @@
 (depends-on "iedit")
 (depends-on "livescript-mode")
 (depends-on "magit")
+(depends-on "markdown-mode")
 (depends-on "multiple-cursors")
 (depends-on "nix-mode")
 (depends-on "noflet")
