@@ -49,6 +49,10 @@
 ;; erlang-mode
 (require 'erlang-flymake)
 
+;; elixir-mode
+(require 'alchemist)
+(alchemist-mode 1)
+
 ;; lilypond-mode
 (add-to-list 'load-path "~/.emacs.d/lisp/lilypond")
 (autoload 'LilyPond-mode "lilypond-mode" "LilyPond Editing Mode" t)
@@ -126,9 +130,7 @@
 (define-key global-map (kbd "C-c b") 'ace-jump-buffer)
 
 ;; aggressive-indent-mode
-(global-aggressive-indent-mode 1)
-(add-to-list 'aggressive-indent-excluded-modes 'html-mode)
-
+(add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
