@@ -6,8 +6,6 @@
 (cask-initialize)
 (require 'pallet)
 
-(require 'typescript "~/.emacs.d/lisp/TypeScript/TypeScript.el")
-
 ;;smex
 (smex-initialize)
 (global-set-key (kbd "M-x") 'smex)
@@ -50,12 +48,6 @@
 ;; elixir-mode
 (require 'alchemist)
 (alchemist-mode 1)
-
-;; lilypond-mode
-(add-to-list 'load-path "~/.emacs.d/lisp/lilypond")
-(autoload 'LilyPond-mode "lilypond-mode" "LilyPond Editing Mode" t)
-(add-to-list 'auto-mode-alist '("\\.ly$" . LilyPond-mode))
-(add-to-list 'auto-mode-alist '("\\.ily$" . LilyPond-mode))
 
 ;; haskell-mode
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
