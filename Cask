@@ -77,6 +77,7 @@
 (depends-on "shm")
 (depends-on "shut-up")
 (depends-on "slime")
+(depends-on "slime-company")
 (depends-on "smartparens")
 (depends-on "smex")
 (depends-on "virtualenv")
