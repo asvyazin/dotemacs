@@ -122,6 +122,9 @@
 ;; aggressive-indent-mode
 (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
 
+;; speed-type
+(autoload 'speed-type-text "speed-type" nil t)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

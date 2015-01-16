@@ -79,6 +79,7 @@
 (depends-on "slime")
 (depends-on "slime-company")
 (depends-on "smartparens")
+(depends-on "speed-type")
 (depends-on "smex")
 (depends-on "virtualenv")
 (depends-on "web")
