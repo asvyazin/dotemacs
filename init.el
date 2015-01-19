@@ -25,6 +25,7 @@
 (global-company-mode)
 (add-to-list 'company-backends 'company-ghc)
 (add-to-list 'company-backends 'company-go)
+(add-to-list 'company-backends 'company-cabal)
 
 ;; smartparens
 (require 'smartparens-config)

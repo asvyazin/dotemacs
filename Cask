@@ -15,6 +15,7 @@
 (depends-on "company")
 (depends-on "company-ghc")
 (depends-on "company-go")
+(depends-on "company-cabal")
 (depends-on "creole")
 (depends-on "dash")
 (depends-on "discover-my-major")
