@@ -132,9 +132,6 @@
 ;; smart-mode-line
 (sml/setup)
 
-;; paradox
-(setq paradox-github-token "e45c967e63b40fe0f0f820e3852762c65fa5f231")
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
