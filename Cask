@@ -8,6 +8,7 @@
 (depends-on "aggressive-indent")
 (depends-on "alchemist")
 (depends-on "ansi")
+(depends-on "async")
 (depends-on "auto-complete")
 (depends-on "base16-theme")
 (depends-on "cask")
