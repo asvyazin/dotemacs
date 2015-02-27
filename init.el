@@ -23,7 +23,9 @@
 (setq x-select-enable-clipboard t)
 (tool-bar-mode -1)
 
+;; pallet-mode
 (require 'pallet)
+(pallet-mode t)
 
 ;;smex
 (smex-initialize)
