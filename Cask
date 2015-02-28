@@ -13,7 +13,6 @@
 (depends-on "base16-theme")
 (depends-on "cask")
 (depends-on "clojure-mode")
-(depends-on "clojure-extra-font-locking")
 (depends-on "clojure-snippets")
 (depends-on "commander")
 (depends-on "company")

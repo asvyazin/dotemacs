@@ -36,11 +36,6 @@
 ;; yasnippet
 (yas-global-mode 1)
 
-;; go
-(add-to-list 'load-path "~/.emacs.d/lisp/goflymake")
-(require 'go-flymake)
-(require 'go-flycheck)
-
 ;; company
 (require 'company)
 (global-company-mode)
