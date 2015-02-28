@@ -41,6 +41,7 @@
 (depends-on "flycheck-rust")
 (depends-on "flymake-easy")
 (depends-on "flymake-elixir")
+(depends-on "flymake-go")
 (depends-on "flymake-yaml")
 (depends-on "framemove")
 (depends-on "fuel")
