@@ -150,3 +150,8 @@
 
 ;; paradox
 (setq paradox-execute-asynchronously t)
+
+;; server-start
+(require 'server)
+(unless (server-running-p)
+  (server-start))
