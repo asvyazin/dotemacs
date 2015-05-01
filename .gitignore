@@ -9,3 +9,4 @@ projectile.cache
 init.el.local
 tramp
 speed-type
+semanticdb
