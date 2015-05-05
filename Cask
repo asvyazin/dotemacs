@@ -12,6 +12,7 @@
 (depends-on "auto-complete")
 (depends-on "base16-theme")
 (depends-on "cask")
+(depends-on "cider")
 (depends-on "clojure-mode")
 (depends-on "clojure-snippets")
 (depends-on "commander")
