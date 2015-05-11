@@ -56,6 +56,7 @@
 (depends-on "god-mode")
 (depends-on "hamlet-mode")
 (depends-on "haskell-mode")
+(depends-on "haskell-snippets")
 (depends-on "hi2")
 (depends-on "highlight-indentation")
 (depends-on "ido-vertical-mode")
