@@ -151,7 +151,7 @@
 (sml/setup)
 
 ;; paradox
-(setq paradox-execute-asynchronously t)
+;(setq paradox-execute-asynchronously t)
 
 ;; server-start
 (require 'server)
