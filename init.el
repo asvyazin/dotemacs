@@ -66,8 +66,11 @@
 (require 'erlang-flymake)
 
 ;; elixir-mode
-(require 'alchemist)
-(alchemist-mode 1)
+(add-hook
+ 'elixir-mode-hook
+ (lambda ()
+   (require 'alchemist)
+   (alchemist-mode 1)))
 
 ;; haskell-mode
 (setq haskell-process-suggest-remove-import-lines t)
