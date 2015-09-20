@@ -67,6 +67,7 @@
 (depends-on "magit")
 (depends-on "magit-popup")
 (depends-on "markdown-mode")
+(depends-on "mmm-mode")
 (depends-on "multiple-cursors")
 (depends-on "names")
 (depends-on "nix-mode")

@@ -163,6 +163,7 @@
 
 ;; magit
 (setq magit-last-seen-setup-instructions "1.4.0")
+
 ;; ora-test-emacs
 (defun ora-test-emacs ()
   (interactive)
@@ -185,3 +186,15 @@
         (delete-region (point-min) (point-max))
         (insert output)
         (search-backward "ERROR!")))))
+
+;; mmm-mode
+(require 'mmm-vars)
+(require 'mmm-auto)
+(setq mmm-global-mode 'maybe)
+(mmm-add-classes
+ '((hamlet-quasiquote
+    :submode hamlet-mode
+    :delimiter-mode nil
+    :front "\\[x?hamlet|"
+    :back "|\\]")))
+(mmm-add-mode-ext-class 'haskell-mode nil 'hamlet-quasiquote)
