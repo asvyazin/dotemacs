@@ -63,6 +63,7 @@
 (depends-on "ido-vertical-mode")
 (depends-on "idomenu")
 (depends-on "iedit")
+(depends-on "js2-mode")
 (depends-on "livescript-mode")
 (depends-on "magit")
 (depends-on "magit-popup")

@@ -98,7 +98,7 @@
 
 (eval-after-load 'flycheck
   '(add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))
-; (eval-after-load 'flycheck '(require 'flycheck-hdevtools))
+					; (eval-after-load 'flycheck '(require 'flycheck-hdevtools))
 
 ;; flycheck
 (eval-after-load 'flycheck
@@ -154,7 +154,7 @@
 (sml/setup)
 
 ;; paradox
-;(setq paradox-execute-asynchronously t)
+					;(setq paradox-execute-asynchronously t)
 
 ;; server-start
 (require 'server)
@@ -170,7 +170,7 @@
   (require 'async)
   (async-start
    (lambda () (shell-command-to-string
-          "emacs --batch --eval \"
+	       "emacs --batch --eval \"
 (condition-case e
     (progn
       (load \\\"~/.emacs.d/init.el\\\")
@@ -195,6 +195,12 @@
  '((hamlet-quasiquote
     :submode hamlet-mode
     :delimiter-mode nil
-    :front "\\[x?hamlet|"
+    :front "\\[[wx]?hamlet|"
+    :back "|\\]")
+   (js2-quasiquote
+    :submode js-mode
+    :delimiter-mode nil
+    :front "\\[julius|"
     :back "|\\]")))
 (mmm-add-mode-ext-class 'haskell-mode nil 'hamlet-quasiquote)
+(mmm-add-mode-ext-class 'haskell-mode nil 'js2-quasiquote)
