@@ -204,3 +204,6 @@
     :back "|\\]")))
 (mmm-add-mode-ext-class 'haskell-mode nil 'hamlet-quasiquote)
 (mmm-add-mode-ext-class 'haskell-mode nil 'js2-quasiquote)
+
+;; elm-mode
+(add-hook 'elm-mode-hook #'elm-oracle-setup-completion)
