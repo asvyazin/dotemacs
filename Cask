@@ -100,6 +100,7 @@
 (depends-on "smex")
 (depends-on "speed-type")
 (depends-on "spinner")
+(depends-on "toml-mode")
 (depends-on "virtualenv")
 (depends-on "web")
 (depends-on "which-key")
