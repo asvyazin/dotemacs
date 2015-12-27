@@ -62,6 +62,7 @@
 (depends-on "haskell-snippets")
 (depends-on "hi2")
 (depends-on "highlight-indentation")
+(depends-on "hydra")
 (depends-on "ido-vertical-mode")
 (depends-on "idomenu")
 (depends-on "iedit")
