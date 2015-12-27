@@ -213,3 +213,10 @@
 
 ;; elm-mode
 (add-hook 'elm-mode-hook #'elm-oracle-setup-completion)
+
+;; purescript
+(add-hook 'purescript-mode-hook
+	  (lambda ()
+	    (turn-on-hi2)
+	    (psc-ide-mode)
+	    (company-mode)))
