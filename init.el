@@ -220,6 +220,4 @@
 ;; purescript
 (add-hook 'purescript-mode-hook
 	  (lambda ()
-	    (turn-on-hi2)
-	    (psc-ide-mode)
-	    (company-mode)))
+	    (turn-on-hi2)))
