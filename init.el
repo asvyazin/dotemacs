@@ -51,7 +51,6 @@
 (sp-use-smartparens-bindings)
 (smartparens-global-mode t)
 (show-smartparens-global-mode t)
-(add-to-list 'sp-ignore-modes-list 'haskell-mode)
 
 ;; slime
 ;; clozure-cl must be installed
@@ -86,8 +85,7 @@
 (add-hook 'haskell-mode-hook (lambda ()
 			       (ghc-init)
 			       (flycheck-mode)
-					;(turn-on-hi2)
-			       (structured-haskell-mode)
+			       (turn-on-hi2)
 			       (turn-on-haskell-doc-mode)
 			       (define-key haskell-mode-map (kbd "C-c C-l") 'haskell-process-load-or-reload)
 			       (define-key haskell-mode-map (kbd "C-`") 'haskell-interactive-bring)
@@ -96,8 +94,7 @@
 			       (define-key haskell-mode-map (kbd "C-c C-c") 'haskell-process-cabal-build)
 			       (define-key haskell-mode-map (kbd "C-c C-k") 'haskell-interactive-mode-clear)
 			       (define-key haskell-mode-map (kbd "C-c c") 'haskell-process-cabal)
-					;(define-key haskell-mode-map (kbd "SPC") 'haskell-mode-contextual-space)
-			       ))
+			       (define-key haskell-mode-map (kbd "SPC") 'haskell-mode-contextual-space)))
 
 (eval-after-load 'flycheck
   '(add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))
