@@ -85,7 +85,7 @@
 (add-hook 'haskell-mode-hook (lambda ()
 			       (ghc-init)
 			       (flycheck-mode)
-			       (turn-on-hi2)
+			       (turn-on-haskell-indentation)
 			       (turn-on-haskell-doc-mode)
 			       (define-key haskell-mode-map (kbd "C-c C-l") 'haskell-process-load-or-reload)
 			       (define-key haskell-mode-map (kbd "C-`") 'haskell-interactive-bring)
@@ -217,4 +217,4 @@
 ;; purescript
 (add-hook 'purescript-mode-hook
 	  (lambda ()
-	    (turn-on-hi2)))
+	    (turn-on-haskell-indentation)))
