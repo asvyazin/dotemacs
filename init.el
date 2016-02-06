@@ -223,3 +223,5 @@
 
 (eval-after-load 'flycheck
   '(add-hook 'flycheck-mode-hook #'flycheck-purescript-setup))
+
+(setq flycheck-purescript-compile-output-dir "output")
