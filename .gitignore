@@ -10,3 +10,5 @@ init.el.local
 tramp
 speed-type
 semanticdb
+ido.last
+smex-items
