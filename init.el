@@ -45,6 +45,7 @@
 (add-to-list 'company-backends 'company-ghc)
 (add-to-list 'company-backends 'company-go)
 (add-to-list 'company-backends 'company-cabal)
+(setq company-dabbrev-downcase nil)
 
 ;; smartparens
 (require 'smartparens-config)
