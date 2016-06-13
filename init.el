@@ -23,7 +23,7 @@
  )
 
 (ido-mode t)
-(setq x-select-enable-clipboard t)
+(setq select-enable-clipboard t)
 (tool-bar-mode -1)
 
 ;; pallet-mode
@@ -42,7 +42,6 @@
 ;; company
 (require 'company)
 (global-company-mode)
-(add-to-list 'company-backends 'company-ghc)
 (add-to-list 'company-backends 'company-go)
 (add-to-list 'company-backends 'company-cabal)
 (setq company-dabbrev-downcase nil)
@@ -84,7 +83,7 @@
 (add-to-list 'exec-path "~/.cabal/bin")
 
 (add-hook 'haskell-mode-hook (lambda ()
-			       (ghc-init)
+			       (intero-mode)
 			       (flycheck-mode)
 			       (turn-on-haskell-indentation)
 			       (turn-on-haskell-doc-mode)
