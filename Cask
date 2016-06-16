@@ -16,6 +16,7 @@
 (depends-on "cask")
 (depends-on "cider")
 (depends-on "clojure-mode")
+(depends-on "clojure-mode-extra-font-locking")
 (depends-on "clojure-snippets")
 (depends-on "commander")
 (depends-on "company")
