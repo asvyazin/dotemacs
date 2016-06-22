@@ -34,6 +34,7 @@
 (depends-on "elixir-yasnippets")
 (depends-on "elm-mode")
 (depends-on "elnode")
+(depends-on "ensime")
 (depends-on "epl")
 (depends-on "erlang")
 (depends-on "ert-runner")
