@@ -216,6 +216,8 @@
 ;; purescript
 (add-hook 'purescript-mode-hook
 	  (lambda ()
+	    (flycheck-mode)
+	    (psc-ide-mode)
 	    (turn-on-haskell-indentation)))
 
 
