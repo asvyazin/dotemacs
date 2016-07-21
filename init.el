@@ -277,4 +277,5 @@
   (add-hook 'scala-mode-hook 'ensime-mode)
   :pin melpa-stable)
 
-(use-package paradox)
+(use-package paradox
+  :commands (paradox-list-packages))
