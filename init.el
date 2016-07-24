@@ -55,15 +55,15 @@
 
 ;; company
 (use-package company
-  :ensure company-go
-  :ensure company-cabal
   :init
   (setq company-dabbrev-downcase nil)
   :config
-  (global-company-mode)
-  (require 'company-go)
-  (require 'company-cabal)
-  (add-to-list 'company-backends 'company-go)
+  (global-company-mode))
+(use-package company-go
+  :config
+  (add-to-list 'company-backends 'company-go))
+(use-package company-cabal
+  :config
   (add-to-list 'company-backends 'company-cabal))
 
 ;; smartparens
@@ -78,12 +78,12 @@
 ;; clozure-cl must be installed
 ;; see http://ccl.clozure.com/manual/chapter2.3.html#command-line-setup
 (use-package slime
-  :ensure slime-company
   :config
   (setq inferior-lisp-program (executable-find "ccl"))
   (require 'slime-autoloads)
-  (require 'slime-company)
-  (slime-setup '(slime-fancy))
+  (slime-setup '(slime-fancy)))
+(use-package slime-company
+  :config
   (slime-setup '(slime-company)))
 
 ;; erlang-mode
@@ -92,10 +92,9 @@
 
 ;; elixir-mode
 (use-package elixir-mode
-  :ensure alchemist
-  :mode ("\\.ex$" . elixir-mode)
+  :mode ("\\.ex$" . elixir-mode))
+(use-package alchemist
   :config
-  (require 'alchemist)
   (add-hook
    'elixir-mode-hook
    (lambda ()
@@ -120,10 +119,8 @@
   (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
   (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode))
 
-(use-package flycheck
-  :ensure flycheck-haskell
+(use-package flycheck-haskell
   :config
-  (require 'flycheck-haskell)
   (add-hook 'haskell-mode-hook 'flycheck-mode)
   (add-hook 'haskell-mode-hook 'flycheck-haskell-setup))
 
@@ -253,29 +250,27 @@
 ;; purescript
 (use-package purescript-mode
   :mode ("\\.purs$" . purescript-mode)
-  :ensure flycheck-purescript
-  :ensure psc-ide
-  :ensure haskell-mode
   :init
   (setq flycheck-purescript-compile-output-dir "output")
   :config
   (require 'haskell-mode)
-  (add-hook 'purescript-mode-hook 'turn-on-haskell-indentation)
-  (require 'flycheck-purescript)
+  (add-hook 'purescript-mode-hook 'turn-on-haskell-indentation))
+(use-package flycheck-purescript
+  :config
   (add-hook 'purescript-mode-hook 'flycheck-mode)
-  (add-hook 'purescript-mode-hook 'flycheck-purescript-setup)
-  (require 'psc-ide)
+  (add-hook 'purescript-mode-hook 'flycheck-purescript-setup))
+(use-package psc-ide
+  :config
   (add-hook 'purescript-mode-hook 'psc-ide-mode))
 
 ;; scala-mode
 (use-package scala-mode
   :mode (("\\.scala$" . scala-mode)
-	 ("\\.sbt$" . sbt-mode))
-  :ensure ensime
+	 ("\\.sbt$" . sbt-mode)))
+(use-package ensime
+  :pin melpa-stable
   :config
-  (require 'ensime)
-  (add-hook 'scala-mode-hook 'ensime-mode)
-  :pin melpa-stable)
+  (add-hook 'scala-mode-hook 'ensime-mode))
 
 (use-package paradox
   :commands (paradox-list-packages))
