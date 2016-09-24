@@ -1,3 +1,6 @@
+(setq select-enable-clipboard t)
+(global-set-key (kbd "C-x k") 'kill-this-buffer)
+
 (require 'package)
 (add-to-list 'package-archives
 	     '("melpa" . "http://melpa.org/packages/"))
@@ -30,8 +33,6 @@
 
 (setq use-package-always-ensure t)
 (require 'use-package)
-
-(setq select-enable-clipboard t)
 
 ;; ido
 (use-package ido
