@@ -236,10 +236,16 @@
       :submode js-mode
       :delimiter-mode nil
       :front "<script[^>]*>"
-      :back "</script>")))
+      :back "</script>")
+     (R-quasiquote
+      :submode R-mode
+      :delimiter-mode nil
+      :front "\\[r|"
+      :back "|\\]")))
   (mmm-add-mode-ext-class 'haskell-mode nil 'hamlet-quasiquote)
   (mmm-add-mode-ext-class 'haskell-mode nil 'js2-quasiquote)
-  (mmm-add-mode-ext-class 'html-mode nil 'html-js-quasiquote))
+  (mmm-add-mode-ext-class 'html-mode nil 'html-js-quasiquote)
+  (mmm-add-mode-ext-class 'haskell-mode nil 'R-quasiquote))
 
 ;; elm-mode
 (use-package elm-mode
