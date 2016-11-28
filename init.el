@@ -292,5 +292,9 @@
 
 ;; js2
 (use-package js2-mode
-  :mode (("\\.js$" . js2-mode)))
-(use-package js2-refactor)
+  :mode "\\.js$")
+(use-package js2-refactor
+  :defer t
+  :init
+  (add-hook 'js2-mode-hook #'js2-refactor-mode)
+  (js2r-add-keybindings-with-prefix "C-c C-m"))
