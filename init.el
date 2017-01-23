@@ -1,6 +1,10 @@
 (setq select-enable-clipboard t)
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
 
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+
 (require 'package)
 (add-to-list 'package-archives
 	     '("melpa" . "http://melpa.org/packages/"))
@@ -37,8 +41,7 @@
 ;; ido
 (use-package ido
   :config
-  (ido-mode t)
-  (tool-bar-mode -1))
+  (ido-mode t))
 
 ;;smex
 (use-package smex
