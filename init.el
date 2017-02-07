@@ -105,6 +105,8 @@
      (alchemist-mode 1))))
 
 ;; haskell-mode
+(use-package shm
+  :defer t)
 (use-package haskell-mode
   :init
   (setq haskell-process-suggest-remove-import-lines t)
@@ -120,7 +122,7 @@
 	      ("C-c C-k" . haskell-interactive-mode-clear)
 	      ("C-c c" . haskell-process-cabal))
   :config
-  (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+  (add-hook 'haskell-mode-hook 'structured-haskell-mode)
   (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode))
 
 (use-package flycheck-haskell
