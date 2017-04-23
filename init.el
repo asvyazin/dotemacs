@@ -134,6 +134,9 @@
   :config
   (add-hook 'haskell-mode-hook 'intero-mode))
 
+(use-package hasky-extensions
+  :bind ("C-c y" . hasky-extensions))
+
 ;; pymacs
 (use-package pymacs
   :commands (pymacs-apply pymacs-call pymacs-call pymacs-eval pymacs-exec pymacs-load pymacs-autoload))
@@ -312,3 +315,6 @@
   :init
   (add-hook 'js2-mode-hook #'js2-refactor-mode)
   (js2r-add-keybindings-with-prefix "C-c C-m"))
+
+(use-package which-key
+  :commands (which-key-mode))
