@@ -312,3 +312,7 @@
 
 (use-package yaml-mode
   :mode ("\\.yaml$" . yaml-mode))
+
+;; protobuf
+(use-package protobuf-mode
+  :mode "\\.proto$")
