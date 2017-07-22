@@ -107,33 +107,17 @@
 
 ;; haskell-mode
 (use-package shm
-  :defer t)
-(use-package haskell-mode
+  :commands structured-haskell-mode
   :init
-  (setq haskell-process-suggest-remove-import-lines t)
-  (setq haskell-process-auto-import-loaded-modules t)
-  (setq haskell-process-log t)
-  (setq haskell-process-type 'cabal-repl)
-  :bind (:map haskell-mode-map
-	      ("C-c C-l" . haskell-process-load-or-reload)
-	      ("C-`" . haskell-interactive-bring)
-	      ("C-c C-t" . haskell-process-do-type)
-	      ("C-c C-i" . haskell-process-do-info)
-	      ("C-c C-c" . haskell-process-cabal-build)
-	      ("C-c C-k" . haskell-interactive-mode-clear)
-	      ("C-c c" . haskell-process-cabal))
-  :config
-  (add-hook 'haskell-mode-hook 'structured-haskell-mode)
-  (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode))
-
-(use-package flycheck-haskell
-  :config
+  (add-hook 'haskell-mode-hook 'structured-haskell-mode))
+(use-package haskell-mode
+  :mode ("\\.?hs$" . haskell-mode))
+(use-package dante
+  :commands dante-mode
+  :init
+  (add-hook 'haskell-mode-hook 'dante-mode)
   (add-hook 'haskell-mode-hook 'flycheck-mode)
-  (add-hook 'haskell-mode-hook 'flycheck-haskell-setup))
-
-(use-package intero
-  :config
-  (add-hook 'haskell-mode-hook 'intero-mode))
+  (add-hook 'dante-mode-hook '(lambda () (flycheck-add-next-checker 'haskell-dante '(warning . haskell-hlint)))))
 
 (use-package hasky-extensions
   :bind ("C-c y" . hasky-extensions))
