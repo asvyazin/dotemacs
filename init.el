@@ -20,6 +20,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(agda2-highlight-level (quote interactive))
  '(custom-enabled-themes (quote (smart-mode-line-dark base16-solarized-dark)))
  '(custom-safe-themes
    (quote
@@ -316,3 +317,6 @@
 ;; protobuf
 (use-package protobuf-mode
   :mode "\\.proto$")
+
+(load-file (let ((coding-system-for-read 'utf-8))
+             (shell-command-to-string "agda-mode locate")))
