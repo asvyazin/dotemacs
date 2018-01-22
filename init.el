@@ -108,6 +108,7 @@
   (add-hook 'elixir-mode-hook 'alchemist-mode))
 
 ;; haskell-mode
+(add-to-list 'exec-path (expand-file-name "~/.local/bin"))
 (use-package shm
   :after haskell-mode
   :commands structured-haskell-mode
