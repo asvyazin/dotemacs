@@ -203,29 +203,6 @@
   (setq magit-last-seen-setup-instructions "1.4.0")
   :bind (:map ido-common-completion-map ("C-x g" . ido-enter-magit-status)))
 
-;; ora-test-emacs
-(defun ora-test-emacs ()
-  (interactive)
-  (require 'async)
-  (async-start
-   (lambda () (shell-command-to-string
-	       "emacs --batch --eval \"
-(condition-case e
-    (progn
-      (load \\\"~/.emacs.d/init.el\\\")
-      (message \\\"-OK-\\\"))
-  (error
-   (message \\\"ERROR!\\\")
-   (signal (car e) (cdr e))))\""))
-   `(lambda (output)
-      (if (string-match "-OK-" output)
-	  (when ,(called-interactively-p 'any)
-	    (message "All is well"))
-	(switch-to-buffer-other-window "*startup error*")
-	(delete-region (point-min) (point-max))
-	(insert output)
-	(search-backward "ERROR!")))))
-
 ;; mmm-mode
 (use-package mmm-mode
   :init
