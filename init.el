@@ -340,8 +340,10 @@
 
 ;; Agda
 (if (executable-find "agda-mode")
-    (load-file (let ((coding-system-for-read 'utf-8))
-                 (shell-command-to-string "agda-mode locate"))))
+    (let* ((coding-system-for-read 'utf-8)
+           (agda-mode-file (shell-command-to-string "agda-mode locate")))
+      (if (file-exists-p agda-mode-file)
+          (load-file agda-mode-file))))
 
 ;; unicode-fonts
 (use-package unicode-fonts
