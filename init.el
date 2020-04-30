@@ -98,7 +98,8 @@
 ;; see http://ccl.clozure.com/manual/chapter2.3.html#command-line-setup
 (use-package sly
   :config
-  (setq inferior-lisp-program (executable-find "ccl")))
+  (setq inferior-lisp-program (or (executable-find "ccl64")
+                                  (executable-find "ccl"))))
 (use-package sly-quicklisp
   :after sly)
 (use-package sly-asdf
