@@ -19,3 +19,6 @@ abbrev_defs
 var
 transient
 .lsp-session-v1
+straight/repos
+straight/build
+straight/build-cache.el
