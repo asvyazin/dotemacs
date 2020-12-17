@@ -325,3 +325,6 @@
 
 ;; c++
 (use-package rtags)
+
+;; SML
+(use-package sml-mode)
