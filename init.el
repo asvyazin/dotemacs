@@ -263,6 +263,7 @@
   :hook (scala-mode . lsp)
   :hook lsp-lens-mode)
 (use-package lsp-ui)
+(use-package lsp-metals)
 
 (use-package org)
 
