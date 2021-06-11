@@ -248,8 +248,8 @@
 
 ;; purescript
 (use-package purescript-mode
-  :after haskell-mode
-  :hook turn-on-haskell-indentation)
+  :hook (purescript-mode . turn-on-purescript-indentation)
+  :hook (purescript-mode . format-all-mode))
 (use-package psc-ide
   :after purescript-mode
   :hook (purescript-mode . psc-ide-mode)
@@ -329,3 +329,11 @@
 
 ;; SML
 (use-package sml-mode)
+
+;; mercury-mode
+(use-package metal-mercury-mode
+  :straight
+  (metal-mercury-mode :type git :host github :repo "fabnicol/metal-mercury-mode" :branch "main"))
+
+;; format-all
+(use-package format-all)
