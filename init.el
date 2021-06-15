@@ -10,6 +10,13 @@
 
 (setq-default indent-tabs-mode nil)
 
+(defun try-add-exec-path (path)
+  (if (and (file-exists-p path)
+           (not (member path exec-path)))
+      (add-to-list 'exec-path path)))
+
+(try-add-exec-path "/usr/local/bin")
+
 ;; straight.el
 (defvar bootstrap-version)
 (let ((bootstrap-file
@@ -123,6 +130,7 @@
 
 ;; haskell-mode
 (add-to-list 'exec-path (expand-file-name "~/.local/bin"))
+(add-to-list 'exec-path (expand-file-name "~/.cabal/bin"))
 (use-package shm
   :after haskell-mode
   :hook (haskell-mode . structured-haskell-mode))
@@ -138,19 +146,6 @@
  :bind
  (:map haskell-mode-map
    ("C-c r" . ormolu-format-buffer)))
-;; (use-package dante 
-;;   :after haskell-mode
-;;   :init (add-hook 'haskell-mode-hook (lambda ()
-;;                                        (dante-mode)
-;;                                        (flycheck-mode)
-;;                                        (flycheck-add-next-checker 'haskell-dante '(warning . haskell-hlint)))))
-;; (use-package intero
-;;   :commands intero-mode
-;;   :init
-;;   (add-hook 'haskell-mode-hook '(lambda ()
-;;                                   (intero-mode)
-;;                                   (flycheck-mode)
-;;                                   (flycheck-add-next-checker 'intero '(warning . haskell-hlint)))))
 
 (use-package hasky-extensions
   :bind ("C-c y" . hasky-extensions))
@@ -169,10 +164,6 @@
 
 (if (file-exists-p "~/.emacs.d/init.el.local")
     (load "~/.emacs.d/init.el.local"))
-
-;; god-mode
-(use-package god-mode
-  :bind ("<escape>" . god-local-mode))
 
 ;; edit-server
 (use-package edit-server
@@ -241,10 +232,6 @@
   (mmm-add-mode-ext-class 'haskell-mode nil 'js2-quasiquote)
   (mmm-add-mode-ext-class 'html-mode nil 'html-js-quasiquote)
   (mmm-add-mode-ext-class 'haskell-mode nil 'R-quasiquote))
-
-;; elm-mode
-(use-package elm-mode
-  :hook elm-oracle-setup-completion)
 
 ;; purescript
 (use-package purescript-mode
@@ -316,19 +303,6 @@
 
 ;; dhall-mode
 (use-package dhall-mode)
-
-;; explain-pause-mode
-(use-package explain-pause-mode
-  :straight
-  (explain-pause-mode :type git :host github :repo "lastquestion/explain-pause-mode")
-  :config
-  (explain-pause-mode t))
-
-;; c++
-(use-package rtags)
-
-;; SML
-(use-package sml-mode)
 
 ;; mercury-mode
 (use-package metal-mercury-mode
