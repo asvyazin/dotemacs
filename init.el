@@ -310,4 +310,5 @@
   (metal-mercury-mode :type git :host github :repo "fabnicol/metal-mercury-mode" :branch "main"))
 
 ;; format-all
-(use-package format-all)
+(use-package format-all
+  :hook format-all-ensure-formatter)
