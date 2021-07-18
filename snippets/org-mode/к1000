@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: к1000
+# key: к1000
+# --
+`(number-to-string (+ 1 (random 1000)))`

@@ -312,3 +312,6 @@
 ;; format-all
 (use-package format-all
   :hook format-all-ensure-formatter)
+
+;; idris-mode
+(use-package idris-mode)
