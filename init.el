@@ -131,9 +131,9 @@
 ;; haskell-mode
 (add-to-list 'exec-path (expand-file-name "~/.local/bin"))
 (add-to-list 'exec-path (expand-file-name "~/.cabal/bin"))
-(use-package shm
-  :after haskell-mode
-  :hook (haskell-mode . structured-haskell-mode))
+;; (use-package shm
+;;   :after haskell-mode
+;;   :hook (haskell-mode . structured-haskell-mode))
 (use-package haskell-mode
   :bind ([f8] . haskell-navigate-imports-go)
   :bind ([f9] . haskell-navigate-imports-return))
@@ -253,6 +253,8 @@
 (use-package lsp-metals)
 
 (use-package org)
+(use-package org-roam
+  :init (setq org-roam-v2-ack t))
 
 ;; ess
 (use-package ess)
