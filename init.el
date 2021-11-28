@@ -31,7 +31,7 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 (setq straight-use-package-by-default t)
-(setq debug-on-error t)
+;;(setq debug-on-error t)
 
 (straight-use-package 'use-package)
 (require 'use-package)
@@ -238,10 +238,10 @@
   :hook (purescript-mode . turn-on-purescript-indentation)
   :hook (purescript-mode . format-all-mode))
 (use-package psc-ide
-  :after purescript-mode
-  :hook (purescript-mode . psc-ide-mode)
-  :hook (psc-ide-mode . flycheck-mode)
-  :hook (psc-ide-mode . psc-ide-flycheck-setup))
+ :after purescript-mode
+ :hook (purescript-mode . psc-ide-mode)
+ :hook (psc-ide-mode . flycheck-mode)
+ :hook (psc-ide-mode . psc-ide-flycheck-setup))
 
 ;; scala-mode
 (use-package scala-mode)
@@ -252,7 +252,9 @@
 (use-package lsp-ui)
 (use-package lsp-metals)
 
-(use-package org)
+(use-package org
+  :init (global-set-key (kbd "C-c l") 'org-store-link)
+  :init (global-set-key (kbd "C-c c") 'org-capture))
 (use-package org-roam
   :init (setq org-roam-v2-ack t))
 
@@ -317,3 +319,6 @@
 
 ;; idris-mode
 (use-package idris-mode)
+
+;; glsl-mode
+(use-package glsl-mode)

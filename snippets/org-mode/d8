@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: к8
-# key: к8
+# name: d8
+# key: d8
 # --
 `(number-to-string (+ 1 (random 8)))`
