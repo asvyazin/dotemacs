@@ -121,7 +121,7 @@
 ;; ocaml
 (use-package tuareg)
 
-(add-to-list 'exec-path (expand-file-name "~/.opam/default/bin"))
+(try-add-exec-path "~/.opam/default/bin")
 (use-package merlin
   :after company
   :hook (tuareg-mode . merlin-mode)
@@ -129,8 +129,9 @@
   (add-to-list 'company-backends 'merlin-company-backend))
 
 ;; haskell-mode
-(add-to-list 'exec-path (expand-file-name "~/.local/bin"))
-(add-to-list 'exec-path (expand-file-name "~/.cabal/bin"))
+(try-add-exec-path "~/.local/bin")
+(try-add-exec-path "~/.cabal/bin")
+(try-add-exec-path "~/.ghcup/bin")
 ;; (use-package shm
 ;;   :after haskell-mode
 ;;   :hook (haskell-mode . structured-haskell-mode))
