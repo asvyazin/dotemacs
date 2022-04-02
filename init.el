@@ -323,3 +323,12 @@
 
 ;; glsl-mode
 (use-package glsl-mode)
+
+;; rust-mode
+(use-package rust-mode
+  :hook (rust-mode . lsp))
+
+;; exercism
+(use-package exercism
+  :straight
+  (exercism :type git :host github :repo "spacebat/exercism.el" :branch "master"))
