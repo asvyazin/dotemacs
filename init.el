@@ -11,9 +11,10 @@
 (setq-default indent-tabs-mode nil)
 
 (defun try-add-exec-path (path)
-  (if (and (file-exists-p path)
+  (let (expanded-path (expand-file-name path))
+    (if (and (file-exists-p path)
            (not (member path exec-path)))
-      (add-to-list 'exec-path path)))
+      (add-to-list 'exec-path path))))
 
 (try-add-exec-path "/usr/local/bin")
 
