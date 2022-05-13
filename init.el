@@ -333,3 +333,6 @@
 (use-package exercism
   :straight
   (exercism :type git :host github :repo "spacebat/exercism.el" :branch "master"))
+
+;; kubernetes
+(use-package kubernetes)
