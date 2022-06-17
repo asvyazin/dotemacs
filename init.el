@@ -11,10 +11,12 @@
 (setq-default indent-tabs-mode nil)
 
 (defun try-add-exec-path (path)
-  (let (expanded-path (expand-file-name path))
-    (if (and (file-exists-p path)
-           (not (member path exec-path)))
-      (add-to-list 'exec-path path))))
+  (let* ((expanded-path (expand-file-name path))
+    (path-to-add (if expanded-path expanded-path path)))
+    (if (and (file-exists-p path-to-add)
+             (not (or (member path exec-path)
+                      (member path-to-add exec-path))))
+      (add-to-list 'exec-path path-to-add))))
 
 (try-add-exec-path "/usr/local/bin")
 
@@ -140,8 +142,8 @@
   :bind ([f8] . haskell-navigate-imports-go)
   :bind ([f9] . haskell-navigate-imports-return))
 (use-package lsp-haskell
-  :after lsp-mode
   :after haskell-mode
+  :after lsp-mode
   :hook (haskell-mode . lsp))
 (use-package ormolu
  :hook (haskell-mode . ormolu-format-on-save-mode)
@@ -336,3 +338,5 @@
 
 ;; kubernetes
 (use-package kubernetes)
+;; lsp-ivy
+(use-package lsp-ivy)
