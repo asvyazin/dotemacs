@@ -301,7 +301,6 @@
   :after (csharp-mode company)
   :hook (csharp-mode . omnisharp-mode)
   :hook (csharp-mode . flycheck-mode)
-  :init (setq omnisharp-server-executable-path "omnisharp")
   :init (add-to-list 'company-backends 'company-omnisharp))
 
 ;; clojure
