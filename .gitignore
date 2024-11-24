@@ -26,3 +26,4 @@ irony
 .cache
 recentf
 session.*
+org-roam.db
