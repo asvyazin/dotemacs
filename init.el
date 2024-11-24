@@ -77,7 +77,8 @@
   :init
   (setq company-dabbrev-downcase nil)
   :config
-  (global-company-mode))
+  (global-company-mode)
+  (add-to-list 'company-backends 'company-capf))
 (use-package company-go
   :after company
   :config
@@ -256,10 +257,22 @@
 (use-package lsp-metals)
 
 (use-package org
-  :init (global-set-key (kbd "C-c l") 'org-store-link)
-  :init (global-set-key (kbd "C-c c") 'org-capture))
+  :init
+  (global-set-key (kbd "C-c l") 'org-store-link)
+  (global-set-key (kbd "C-c c") 'org-capture))
 (use-package org-roam
-  :init (setq org-roam-v2-ack t))
+  :init
+  (setq org-roam-v2-ack t)
+  (setq org-roam-directory (file-truename "~/org-roam"))
+  (setq org-roam-database-connector 'sqlite-builtin)
+  (setq org-roam-dailies-directory "daily/")
+  (setq org-roam-dailies-capture-templates
+      '(("d" "default" entry
+         "* %?"
+         :target (file+head "%<%Y-%m-%d>.org"
+                            "#+title: %<%Y-%m-%d>\n"))))
+  :config
+  (org-roam-db-autosync-mode))
 
 ;; ess
 (use-package ess)
