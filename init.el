@@ -10,16 +10,6 @@
 
 (setq-default indent-tabs-mode nil)
 
-(defun try-add-exec-path (path)
-  (let* ((expanded-path (expand-file-name path))
-    (path-to-add (if expanded-path expanded-path path)))
-    (if (and (file-exists-p path-to-add)
-             (not (or (member path exec-path)
-                      (member path-to-add exec-path))))
-      (add-to-list 'exec-path path-to-add))))
-
-(try-add-exec-path "/usr/local/bin")
-
 ;; straight.el
 (defvar bootstrap-version)
 (let ((bootstrap-file
@@ -55,6 +45,12 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;; exec-path-from-shell
+(use-package exec-path-from-shell
+  :config
+  (when (memq window-system '(mac ns x))
+    (exec-path-from-shell-initialize)))
 
 ;; helm
 (use-package helm
@@ -121,7 +117,6 @@
 ;; ocaml
 (use-package tuareg)
 
-(try-add-exec-path "~/.opam/default/bin")
 (use-package merlin
   :after company
   :hook (tuareg-mode . merlin-mode)
@@ -129,9 +124,6 @@
   (add-to-list 'company-backends 'merlin-company-backend))
 
 ;; haskell-mode
-(try-add-exec-path "~/.local/bin")
-(try-add-exec-path "~/.cabal/bin")
-(try-add-exec-path "~/.ghcup/bin")
 ;; (use-package shm
 ;;   :after haskell-mode
 ;;   :hook (haskell-mode . structured-haskell-mode))
