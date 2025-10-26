@@ -24,7 +24,7 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 (setq straight-use-package-by-default t)
-(setq debug-on-error t)
+;;(setq debug-on-error t)
 
 (straight-use-package 'use-package)
 (require 'use-package)
