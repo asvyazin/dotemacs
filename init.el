@@ -1,5 +1,5 @@
 (setq select-enable-clipboard t)
-(global-set-key (kbd "C-x k") 'kill-this-buffer)
+(global-set-key (kbd "C-x k") 'kill-current-buffer)
 
 (if (fboundp 'tool-bar-mode)
     (tool-bar-mode -1))
