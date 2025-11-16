@@ -1,5 +1,5 @@
 (setq select-enable-clipboard t)
-(global-set-key (kbd "C-x k") 'kill-current-buffer)
+(global-set-key (kbd "s-k") 'kill-current-buffer)
 
 (if (fboundp 'tool-bar-mode)
     (tool-bar-mode -1))
@@ -24,7 +24,6 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 (setq straight-use-package-by-default t)
-;;(setq debug-on-error t)
 
 (straight-use-package 'use-package)
 (require 'use-package)
@@ -337,7 +336,7 @@
 ;; exercism
 (use-package exercism
   :straight
-  (exercism :type git :host github :repo "spacebat/exercism.el" :branch "master"))
+  (exercism :type git :host github :repo "spacebat/exercism.el" :branch "main"))
 
 ;; kubernetes
 (use-package kubernetes)
@@ -347,3 +346,56 @@
 ;; lua
 (use-package lua-mode
   :hook (lua-mode . lsp))
+
+;; minuet-ai
+;; (use-package minuet
+;;   :bind
+;;   (("M-y" . #'minuet-complete-with-minibuffer) ;; use minibuffer for completion
+;;    ("M-i" . #'minuet-show-suggestion) ;; use overlay for completion
+;;    ("C-c m" . #'minuet-configure-provider)
+;;    :map minuet-active-mode-map
+;;    ;; These keymaps activate only when a minuet suggestion is displayed in the current buffer
+;;    ("M-p" . #'minuet-previous-suggestion) ;; invoke completion or cycle to next completion
+;;    ("M-n" . #'minuet-next-suggestion) ;; invoke completion or cycle to previous completion
+;;    ("M-A" . #'minuet-accept-suggestion) ;; accept whole completion
+;;    ;; Accept the first line of completion, or N lines with a numeric-prefix:
+;;    ;; e.g. C-u 2 M-a will accepts 2 lines of completion.
+;;    ("M-a" . #'minuet-accept-suggestion-line)
+;;    ("M-e" . #'minuet-dismiss-suggestion))
+  
+;;   :init
+;;   (add-hook 'prog-mode-hook #'minuet-auto-suggestion-mode)
+    
+;;   :config
+;;   (setq minuet-request-timeout 60)
+;;   (setq minuet-provider 'openai-fim-compatible)
+;;   (setq minuet-n-completions 1)
+;;   (setq minuet-context-window 1024)
+;;   (plist-put minuet-openai-fim-compatible-options :end-point "http://localhost:11434/v1/completions")
+;;   (plist-put minuet-openai-fim-compatible-options :name "Ollama")
+;;   (plist-put minuet-openai-fim-compatible-options :api-key "TERM")
+;;   (plist-put minuet-openai-fim-compatible-options :model "qwen3-coder:480b-cloud")
+;;   (minuet-set-optional-options minuet-openai-fim-compatible-options :max_tokens 512))
+
+;; gptel
+(use-package gptel
+  :init (require 'gptel-integrations)
+  :config
+  (setq
+   gptel-model 'qwen3-coder:480b-cloud
+   gptel-backend (gptel-make-ollama "Ollama"
+                                    :host "localhost:11434"
+                                    :stream t
+                                    :models '(qwen3-coder:480b-cloud))))
+
+;; MCP
+(use-package mcp
+  :after gptel
+  :config (require 'mcp-hub)
+  :hook (after-init . mcp-hub-start-all-server)
+  :custom (mcp-hub-servers
+           `(("filesystem" . (:command "npx"
+                              :args ("-y" "@modelcontextprotocol/server-filesystem")
+                              :roots ("/Volumes/KINGSTON/dev/")))
+             ("wcgw" . (:command "uvx"
+                        :args ("--python" "3.12" "wcgw@latest"))))))
